@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* ===== 暖白纸质感 · 配色系统 ===== */
+:root {
+  /* 基础 */
+  --background: #FDFBF7;
+  --foreground: #2D2B26;
+  /* 卡片 */
+  --card: #FFFFFF;
+  --card-foreground: #2D2B26;
+  /* 弹出层 */
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2B26;
+  /* 主色调 — 藏蓝 */
+  --primary: #3B5C9F;
+  --primary-foreground: #FFFFFF;
+  /* 次要 */
+  --secondary: #F5F2EB;
+  --secondary-foreground: #2D2B26;
+  /* 静音 */
+  --muted: #F5F2EB;
+  --muted-foreground: #6B685A;
+  /* 强调 */
+  --accent: #F5F2EB;
+  --accent-foreground: #2D2B26;
+  /* 破坏 — 朱砂红 */
+  --destructive: #C4554D;
+  --destructive-foreground: #FFFFFF;
+  /* 成功 — 墨绿 */
+  --success: #2E7D5A;
+  --success-foreground: #FFFFFF;
+  /* 边框 & 输入 */
+  --border: #E8E4D9;
+  --input: #E8E4D9;
+  --ring: #3B5C9F;
+  /* 圆角 */
+  --radius: 0.5rem;
+  /* 侧边栏 */
+  --sidebar: #FDFBF7;
+  --sidebar-foreground: #2D2B26;
+  --sidebar-primary: #3B5C9F;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5F2EB;
+  --sidebar-accent-foreground: #2D2B26;
+  --sidebar-border: #E8E4D9;
+  --sidebar-ring: #3B5C9F;
+}
+
+/* ===== 全局 ===== */
+body {
+  font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ===== 数字专用字体 ===== */
+.font-display {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===== 入场动画 ===== */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out both;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D4CFC4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B0A99A; }
+
+/* ===== 选中 ===== */
+::selection {
+  background: rgba(59, 92, 159, 0.12);
+  color: var(--foreground);
+}
